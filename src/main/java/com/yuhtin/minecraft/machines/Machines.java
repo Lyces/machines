@@ -49,7 +49,7 @@ public class Machines extends JavaPlugin {
 
         this.getLogger().info("Injected members");
 
-        
+
 
     }
 
