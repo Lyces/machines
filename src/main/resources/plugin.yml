@@ -1,0 +1,4 @@
+name: machines
+version: ${project.version}
+main: com.yuhtin.minecraft.machines.Machines
+authors: [ Yuhtin ]
