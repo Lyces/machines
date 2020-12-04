@@ -1,0 +1,47 @@
+machines:
+  machine-1:
+
+    name: 'machine-1'
+    displayName: '&cMaquina de Testes'
+
+    icon:
+
+      material: DIAMOND_BLOCK
+      displayName: '&cMaquina de Testes'
+      description:
+        - '&7Esta é uma maquina apenas para exemplo'
+        - '&7para usar-la, coloque-a no chão e veja a mágica'
+        - ''
+        - '&7Tipo: &aComum'
+        - '&7Quantidade: &c%quantity%'
+
+    drop:
+
+      # price per item
+      price: 2
+      material: DIAMOND
+      displayName: "&aDiamante"
+
+    levels:
+
+      default:
+
+        displayName: "&aNível 0"
+
+        # in seconds
+        time: 25
+
+        # items per generation
+        items: 1
+
+      one:
+
+        displayName: "&aNível 1"
+        time: 15
+        items: 2
+
+      two:
+
+        displayName: "&aNível 2"
+        time: 10
+        items: 5
