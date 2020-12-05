@@ -1,0 +1,9 @@
+fuels:
+  fuel1:
+
+    quantity: 10
+
+    displayName: "&cDiesel (10 litros)"
+    description:
+      - '&7Este combustível é do tipo Diesel'
+      - '&7e contem 10 litros armazenados'

@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 public class DropParser {
 
     @Inject @Named("main") private Logger logger;
+
     @Inject private ItemParser itemParser;
 
     public Drop parseDropSection(ConfigurationSection section) {

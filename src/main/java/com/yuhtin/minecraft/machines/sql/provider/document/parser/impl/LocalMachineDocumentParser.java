@@ -5,7 +5,6 @@ import com.yuhtin.minecraft.machines.api.machine.LocalMachine;
 import com.yuhtin.minecraft.machines.manager.MachineManager;
 import com.yuhtin.minecraft.machines.sql.provider.document.Document;
 import com.yuhtin.minecraft.machines.sql.provider.document.parser.DocumentParser;
-import com.yuhtin.minecraft.machines.utils.SimpleLocation;
 import com.yuhtin.minecraft.machines.utils.SimpleLocationSerializer;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -24,6 +23,7 @@ public final class LocalMachineDocumentParser implements DocumentParser<LocalMac
         if (document.isEmpty()) return null;
 
         return LocalMachine.builder()
+                .owner(document.getString("owner"))
                 .location(SimpleLocationSerializer.deserialize(document.getString("location")).toBukkit())
                 .machine(this.machineManager.get(document.getString("machine")))
                 .build();

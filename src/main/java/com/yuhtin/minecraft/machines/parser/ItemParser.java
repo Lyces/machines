@@ -67,7 +67,7 @@ public class ItemParser {
 
             if (section.contains("hideFlags") && section.getBoolean("hideFlags"))
                 itemBuilder.addItemFlags(ItemFlag.values());
-            
+
             if (section.contains("displayName")) itemBuilder.name(ColorUtils.colored(section.getString("displayName")));
 
             if (section.contains("description")) {

@@ -13,6 +13,7 @@ import org.bukkit.Location;
 @Data
 public class LocalMachine {
 
+    private final String owner;
     private final Machine machine;
     private final Location location;
 
