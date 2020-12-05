@@ -64,8 +64,10 @@ public class ItemParser {
             if (section.contains("quantity")) itemBuilder.setAmount(section.getInt("quantity"));
             if (section.contains("glow") && section.getBoolean("glow")) itemBuilder.glow();
             if (section.contains("unbreakable") && section.getBoolean("unbreakable")) itemBuilder.setUnbreakable(true);
+
             if (section.contains("hideFlags") && section.getBoolean("hideFlags"))
                 itemBuilder.addItemFlags(ItemFlag.values());
+            
             if (section.contains("displayName")) itemBuilder.name(ColorUtils.colored(section.getString("displayName")));
 
             if (section.contains("description")) {
@@ -95,11 +97,11 @@ public class ItemParser {
 
             return itemBuilder.result();
 
-        } catch (Throwable throwable) {
+        } catch (Exception exception) {
 
-            throwable.printStackTrace();
-
-            this.logger.warning(section.getName() + " is invalid!");
+            this.logger.warning(
+                    "Error on try parse the item " + section.getName() + " of " + section.getParent().getName()
+            );
             return null;
 
         }
